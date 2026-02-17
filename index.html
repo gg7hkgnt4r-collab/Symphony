@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Symphony - Luxury Wedding & Event Organizers</title>
+<link
+href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap"
+rel="stylesheet"
+/>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+<style>
+/* Base Styles - Dark Romantic Luxury Theme */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+html {
+scroll-behavior: smooth;
+}
+body {
+font-family: "Montserrat", sans-serif;
+background-color: #0a0a0a;
+color: #e8d8d8;
+line-height: 1.8;
+overflow-x: hidden;
+background-image: radial-gradient(
+circle at 20% 30%,
+rgba(180, 24, 91, 0.05) 0%,
+transparent 20%
+),
+radial-gradient(
+circle at 80% 70%,
+rgba(220, 53, 123, 0.04) 0%,
+transparent 20%
+);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+font-family: "Playfair Display", serif;
+font-weight: 700;
+margin-bottom: 1.2rem;
+color: #ff6b9d;
+text-shadow: 0 2px 10px rgba(255, 107, 157, 0.3);
+}
+p {
+margin-bottom: 1.2rem;
+font-size: 1.1rem;
+color: #d0b8c5;
+font-weight: 300;
+}
+.container {
+width: 90%;
+max-width: 1300px;
+margin: 0 auto;
+padding: 0 20px;
+}
+section {
+padding: 120px 0;
+text-align: center; /* All sections centered */
+}
+/* Header & Navigation */
+header {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+background-color: rgba(15, 10, 15, 0.95);
+box-shadow: 0 4px 30px rgba(255, 107, 157, 0.1);
+z-index: 1000;
+transition: all 0.4s ease;
+backdrop-filter: blur(10px);
+border-bottom: 1px solid rgba(255, 107, 157, 0.1);
+}
+.header-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 25px 0;
+max-width: 1300px;
+margin: 0 auto;
+width: 90%;
+}
+.logo {
+font-family: "Alex Brush", cursive;
+font-size: 3.2rem;
+color: #ff6b9d;
+text-decoration: none;
+position: relative;
+}
+.logo span {
+color: #ff9ec0;
+text-shadow: 0 0 20px rgba(255, 107, 157, 0.5);
+}
+.nav-menu {
+display: flex;
+list-style: none;
+}
+.nav-menu li {
+margin-left: 50px;
+}
+.nav-menu a {
+text-decoration: none;
+color: #e8d8d8;
+font-size: 1.2rem;
+font-weight: 500;
+text-transform: uppercase;
+letter-spacing: 1px;
+transition: all 0.3s ease;
+position: relative;
+padding: 10px 0;
+}
+.nav-menu a:hover {
+color: #ff6b9d;
+}
+.nav-menu a:after {
+content: "";
+position: absolute;
+width: 0;
+height: 2px;
+bottom: 0;
+left: 0;
+background: linear-gradient(90deg, #ff6b9d, #ff9ec0);
+transition: width 0.4s ease;
+box-shadow: 0 0 10px rgba(255, 107, 157, 0.5);
+}
+.nav-menu a:hover:after {
+width: 100%;
+}
+/* Hamburger Menu */
+.hamburger {
+display: none;
+cursor: pointer;
+background: none;
+border: none;
+width: 35px;
+height: 35px;
+position: relative;
+}
+.hamburger span {
+display: block;
+width: 100%;
+height: 3px;
+background: linear-gradient(90deg, #ff6b9d, #ff9ec0);
+position: absolute;
+left: 0;
+transition: all 0.3s ease;
+border-radius: 2px;
+box-shadow: 0 0 5px rgba(255, 107, 157, 0.5);
+}
+.hamburger span:nth-child(1) {
+top: 0;
+}
+.hamburger span:nth-child(2) {
+top: 50%;
+transform: translateY(-50%);
+}
+.hamburger span:nth-child(3) {
+bottom: 0;
+}
+.hamburger.active span:nth-child(1) {
+transform: rotate(45deg);
+top: 50%;
+}
+.hamburger.active span:nth-child(2) {
+opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+transform: rotate(-45deg);
+bottom: 50%;
+}
+/* Hero Section */
+.hero {
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+background: radial-gradient(
+ellipse at 30% 30%,
+rgba(255, 107, 157, 0.15) 0%,
+transparent 50%
+),
+radial-gradient(
+ellipse at 70% 70%,
+rgba(180, 24, 91, 0.1) 0%,
+transparent 50%
+),
+linear-gradient(
+180deg,
+rgba(10, 5, 10, 0.9) 0%,
+rgba(20, 10, 20, 0.95) 100%
+);
+position: relative;
+overflow: hidden;
+}
+.hero:before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" opacity="0.03"><path d="M100,30 Q150,100 100,170 Q50,100 100,30" fill="none" stroke="%23ff6b9d" stroke-width="1"/></svg>')
+repeat;
+z-index: -1;
+}
+.hero-content {
+opacity: 0;
+transform: translateY(60px);
+transition: all 1.5s ease-out;
+}
+.hero-content.visible {
+opacity: 1;
+transform: translateY(0);
+}
+.hero-content h1 {
+font-family: "Alex Brush", cursive;
+font-size: 7rem;
+margin-bottom: 20px;
+color: #ff6b9d;
+background: linear-gradient(45deg, #ff6b9d, #ff9ec0);
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+text-shadow: 0 5px 30px rgba(255, 107, 157, 0.5);
+}
+.hero-content p {
+font-size: 2.2rem;
+margin-bottom: 50px;
+color: #e8d8d8;
+font-weight: 300;
+text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+.btn {
+display: inline-block;
+padding: 18px 50px;
+background: transparent;
+color: #ff6b9d;
+text-decoration: none;
+font-size: 1.5rem;
+border-radius: 50px;
+border: 2px solid transparent;
+background: linear-gradient(45deg, #0a0a0a, #0a0a0a) padding-box,
+linear-gradient(45deg, #ff6b9d, #ff9ec0) border-box;
+transition: all 0.5s ease;
+font-weight: 500;
+letter-spacing: 1px;
+position: relative;
+overflow: hidden;
+z-index: 1;
+}
+.btn:hover {
+color: #0a0a0a;
+transform: translateY(-8px);
+box-shadow: 0 15px 40px rgba(255, 107, 157, 0.4);
+}
+.btn:before {
+content: "";
+position: absolute;
+top: 0;
+left: -100%;
+width: 100%;
+height: 100%;
+background: linear-gradient(45deg, #ff6b9d, #ff9ec0);
+transition: all 0.5s ease;
+z-index: -1;
+border-radius: 50px;
+}
+.btn:hover:before {
+left: 0;
+}
+/* Scroll Reveal */
+.reveal {
+opacity: 0;
+transform: translateY(100px);
+transition: all 1.5s ease-out;
+}
+.reveal.active {
+opacity: 1;
+transform: translateY(0);
+}
+.reveal-left {
+transform: translateX(-120px);
+opacity: 0;
+}
+.reveal-right {
+transform: translateX(120px);
+opacity: 0;
+}
+.reveal-left.active,
+.reveal-right.active {
+transform: translateX(0);
+opacity: 1;
+}
+/* About Section */
+.about {
+background: linear-gradient(180deg, #0a0a0a 0%, #150a15 100%);
+position: relative;
+overflow: hidden;
+}
+.about:before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" opacity="0.03"><path d="M150,50 Q250,150 150,250 Q50,150 150,50" fill="none" stroke="%23ff6b9d" stroke-width="1.5"/></svg>')
+repeat;
+z-index: 0;
+}
+.section-title {
+font-size: 3.8rem;
+margin-bottom: 80px;
+color: #ff6b9d;
+position: relative;
+z-index: 1;
+}
+.section-title::after {
+content: "";
+width: 100px;
+height: 3px;
+background: linear-gradient(90deg, #ff6b9d, #ff9ec0);
+display: block;
+margin: 20px auto;
+box-shadow: 0 0 15px rgba(255, 107, 157, 0.5);
+}
+.about-content {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 100px;
+max-width: 1200px;
+margin: 0 auto;
+flex-wrap: wrap;
+}
+.about-text {
+flex: 1;
+min-width: 300px;
+text-align: left;
+}
+.about-text p {
+font-size: 1.2rem;
+margin-bottom: 30px;
+position: relative;
+padding-left: 20px;
+border-left: 2px solid rgba(255, 107, 157, 0.3);
+}
+.about-image {
+flex: 1;
+min-width: 300px;
+height: 600px;
+border-radius: 20px;
+overflow: hidden;
+box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
+inset 0 0 50px rgba(255, 107, 157, 0.1);
+background-size: cover;
+background-position: center;
+position: relative;
+border: 1px solid rgba(255, 107, 157, 0.2);
+}
+.about-image:before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(
+45deg,
+rgba(255, 107, 157, 0.1),
+rgba(180, 24, 91, 0.05)
+);
+z-index: 1;
+}
+/* Gallery Section */
+.gallery {
+background: linear-gradient(180deg, #150a15 0%, #0a0a0a 100%);
+position: relative;
+overflow: hidden;
+}
+.gallery:before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" opacity="0.02"><circle cx="125" cy="125" r="80" fill="none" stroke="%23ff6b9d" stroke-width="1"/></svg>')
+repeat;
+z-index: 0;
+}
+.gallery-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+gap: 40px;
+max-width: 1400px;
+margin: 0 auto;
+justify-content: center;
+}
+.gallery-item {
+height: 350px;
+border-radius: 20px;
+overflow: hidden;
+position: relative;
+box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+transition: all 0.6s ease;
+border: 1px solid rgba(255, 107, 157, 0.1);
+background-size: cover;
+background-position: center;
+}
+.gallery-item:hover {
+transform: translateY(-20px) scale(1.03);
+box-shadow: 0 30px 70px rgba(255, 107, 157, 0.3);
+border-color: rgba(255, 107, 157, 0.3);
+}
+.gallery-item::after {
+content: "";
+position: absolute;
+inset: 0;
+background: linear-gradient(
+to top,
+rgba(10, 5, 10, 0.9) 0%,
+transparent 50%
+);
+opacity: 0.7;
+transition: opacity 0.5s ease;
+}
+.gallery-item:hover::after {
+opacity: 0.4;
+}
+.gallery-caption {
+position: absolute;
+bottom: 30px;
+left: 50%;
+transform: translateX(-50%) translateY(60px);
+background: rgba(20, 10, 20, 0.9);
+padding: 15px 40px;
+border-radius: 50px;
+font-size: 1.3rem;
+color: #ff9ec0;
+font-weight: 500;
+transition: all 0.5s ease;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+border: 1px solid rgba(255, 107, 157, 0.2);
+backdrop-filter: blur(10px);
+z-index: 2;
+opacity: 0;
+pointer-events: none;
+}
+.gallery-item:hover .gallery-caption {
+transform: translateX(-50%) translateY(0);
+background: rgba(255, 107, 157, 0.9);
+color: #0a0a0a;
+box-shadow: 0 15px 40px rgba(255, 107, 157, 0.4);
+opacity: 1;
+}
+/* Contact Section */
+.contact {
+background: linear-gradient(180deg, #0a0a0a 0%, #150a15 100%);
+position: relative;
+overflow: hidden;
+}
+.contact:before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="350" height="350" opacity="0.02"><path d="M175,75 Q275,175 175,275 Q75,175 175,75" fill="none" stroke="%23ff6b9d" stroke-width="1.2"/></svg>')
+repeat;
+z-index: 0;
+}
+.contact-form {
+max-width: 800px;
+margin: 0 auto;
+background: rgba(20, 10, 20, 0.8);
+padding: 70px;
+border-radius: 30px;
+box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
+inset 0 0 50px rgba(255, 107, 157, 0.05);
+border: 1px solid rgba(255, 107, 157, 0.1);
+backdrop-filter: blur(10px);
+}
+.form-group label {
+font-size: 1.2rem;
+color: #ff9ec0;
+font-weight: 500;
+margin-bottom: 10px;
+display: block;
+text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+.form-group input,
+.form-group textarea {
+width: 100%;
+padding: 18px;
+border-radius: 15px;
+border: 1px solid rgba(255, 107, 157, 0.3);
+font-size: 1.1rem;
+transition: all 0.3s ease;
+background: rgba(10, 5, 10, 0.7);
+color: #e8d8d8;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+outline: none;
+border-color: #ff6b9d;
+box-shadow: 0 0 30px rgba(255, 107, 157, 0.3);
+background: rgba(15, 7, 15, 0.9);
+}
+.submit-btn {
+background: linear-gradient(45deg, #ff6b9d, #ff9ec0);
+color: #0a0a0a;
+padding: 18px 70px;
+font-size: 1.4rem;
+border-radius: 50px;
+cursor: pointer;
+transition: all 0.5s ease;
+border: none;
+font-weight: 600;
+letter-spacing: 1px;
+margin-top: 20px;
+box-shadow: 0 10px 30px rgba(255, 107, 157, 0.3);
+position: relative;
+overflow: hidden;
+}
+.submit-btn:hover {
+transform: translateY(-8px) scale(1.05);
+box-shadow: 0 20px 50px rgba(255, 107, 157, 0.5);
+}
+.submit-btn:before {
+content: "";
+position: absolute;
+top: 0;
+left: -100%;
+width: 100%;
+height: 100%;
+background: linear-gradient(
+90deg,
+transparent,
+rgba(255, 255, 255, 0.2),
+transparent
+);
+transition: all 0.6s ease;
+}
+.submit-btn:hover:before {
+left: 100%;
+}
+/* Footer */
+footer {
+background: linear-gradient(180deg, #150a15 0%, #0a050a 100%);
+color: #e8d8d8;
+padding: 80px 0;
+text-align: center;
+border-top: 1px solid rgba(255, 107, 157, 0.1);
+}
+.footer-logo {
+font-family: "Alex Brush", cursive;
+font-size: 4rem;
+margin-bottom: 30px;
+color: #ff6b9d;
+text-shadow: 0 5px 20px rgba(255, 107, 157, 0.5);
+}
+.footer-links {
+display: flex;
+justify-content: center;
+list-style: none;
+margin-bottom: 40px;
+flex-wrap: wrap;
+gap: 30px;
+}
+.footer-links a {
+color: #e8d8d8;
+font-size: 1.2rem;
+text-decoration: none;
+transition: all 0.3s;
+position: relative;
+padding: 10px 0;
+}
+.footer-links a:hover {
+color: #ff6b9d;
+}
+.footer-links a:after {
+content: "";
+position: absolute;
+width: 0;
+height: 1px;
+bottom: 0;
+left: 0;
+background: linear-gradient(90deg, #ff6b9d, #ff9ec0);
+transition: width 0.3s ease;
+}
+.footer-links a:hover:after {
+width: 100%;
+}
+/* Mobile Responsive */
+@media (max-width: 768px) {
+.hamburger {
+display: block;
+}
+.nav-menu {
+position: fixed;
+top: 90px;
+right: -100%;
+width: 100%;
+height: calc(100vh - 90px);
+background: rgba(15, 10, 15, 0.98);
+flex-direction: column;
+padding-top: 100px;
+transition: right 0.5s ease;
+backdrop-filter: blur(20px);
+border-left: 1px solid rgba(255, 107, 157, 0.1);
+}
+.nav-menu.active {
+right: 0;
+}
+.nav-menu li {
+margin: 30px 0;
+text-align: center;
+}
+.hero-content h1 {
+font-size: 5rem;
+}
+.hero-content p {
+font-size: 1.8rem;
+}
+.about-content {
+flex-direction: column;
+gap: 60px;
+}
+.about-image {
+height: 400px;
+}
+.gallery-grid {
+grid-template-columns: 1fr;
+padding: 0 20px;
+}
+.contact-form {
+padding: 50px 30px;
+}
+.footer-links {
+flex-direction: column;
+gap: 20px;
+}
+}
+</style>
+</head>
+<body>
+<!-- Header -->
+<header>
+<div class="header-container">
+<a href="#" class="logo"><span>Symphony</span></a>
+<button class="hamburger" id="hamburger">
+<span></span>
+<span></span>
+<span></span>
+</button>
+<ul class="nav-menu" id="nav-menu">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+<div class="container hero-content">
+<h1>Symphony</h1>
+<p>Luxury Weddings Crafted with Eternal Romance</p>
+<a href="#contact" class="btn">Begin Your Journey</a>
+</div>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+<div class="container">
+<h2 class="section-title reveal">About Symphony</h2>
+<div class="about-content">
+<div class="about-text reveal reveal-left">
+<p>
+At Symphony, we specialize in creating bespoke luxury weddings
+and events that reflect your unique love story. With meticulous
+attention to detail and unparalleled creativity, we bring elegance
+and romance to every celebration.
+</p>
+<p>
+Our expert team curates flawless experiences, from intimate
+ceremonies to grand receptions, ensuring every moment is timeless
+and unforgettable.
+</p>
+<p>
+Trust us to orchestrate the perfect symphony of love for your
+special day.
+</p>
+</div>
+<div
+class="about-image reveal reveal-right"
+style="background-image: url('https://img.weddingbazaar.com/photos/pictures/000/656/194/new_medium/withlovenoor.jpg?1547107092');"
+></div>
+</div>
+</div>
+</section>
+
+<!-- Gallery Section -->
+<section class="gallery" id="gallery">
+<div class="container">
+<h2 class="section-title reveal">Our Luxury Portfolio</h2>
+<div class="gallery-grid">
+<div class="gallery-item reveal" style="background-image: url('data:image/jpeg;base64,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');">
+<div class="gallery-caption">Memorable Ceremony Moment</div>
+</div>
+<div class="gallery-item reveal" style="background-image: url('https://i.pinimg.com/736x/f1/7d/37/f17d370a4c6d71fa21f7040408f4e2a0.jpg');">
+<div class="gallery-caption">Romantic Venue setup</div>
+</div>
+<div class="gallery-item reveal" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjpVCy7kqQv8ieH5aT8rHfXMNxoh0AeF8S9g&s');">
+<div class="gallery-caption">Romantic First Dance</div>
+</div>
+<div class="gallery-item reveal" style="background-image: url('https://media.istockphoto.com/id/471906412/photo/beautiful-table-setting-for-an-wedding-reception-or-an-event.jpg?s=612x612&w=0&k=20&c=knlIBspy-ZKuQV7bUVr_eclJmyC24ShNAva_Jh9Rwfc=');">
+<div class="gallery-caption">Luxury Venue Decor</div>
+</div>
+<div class="gallery-item reveal" style="background-image: url('https://thumbs.dreamstime.com/b/elegant-bachelorette-party-table-adorned-pink-decorations-flowers-beautifully-set-featuring-including-vibrant-floral-386058240.jpg');">
+<div class="gallery-caption">Sophisticated Table Arrangement</div>
+</div>
+<div class="gallery-item reveal" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUISC5MZT-I98NzcNO5_yR5XySN5DrGm9NRQ&s');">
+<div class="gallery-caption">Timeless Couple Portrait</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+<div class="container">
+<h2 class="section-title reveal">Get in Touch</h2>
+<form class="contact-form reveal" id="whatsappForm">
+<div class="form-group">
+<label for="name">Your Name</label>
+<input type="text" id="name" required />
+</div>
+
+<div class="form-group">
+<label for="event">Event Type</label>
+<input type="text" id="event" placeholder="e.g., Wedding, Engagement, Reception" required />
+</div>
+
+<div class="date-group" style="display: flex; gap: 30px; flex-wrap: wrap">
+<div class="form-group" style="flex: 1; min-width: 250px">
+<label for="start-date">Start Date</label>
+<input type="date" id="start-date" required />
+</div>
+<div class="form-group" style="flex: 1; min-width: 250px">
+<label for="end-date">End Date</label>
+<input type="date" id="end-date" required />
+</div>
+</div>
+
+<div class="form-group">
+<label for="message">Your Message (Optional)</label>
+<textarea id="message" rows="6" placeholder="Tell us about your dream event..."></textarea>
+</div>
+
+<button type="submit" class="submit-btn">
+<i class="fas fa-paper-plane" style="margin-right: 10px"></i>Send Inquiry via WhatsApp
+</button>
+</form>
+</div>
+</section>
+
+<!-- Footer -->
+<footer>
+<div class="container">
+<div class="footer-logo">Symphony</div>
+<ul class="footer-links">
+<li><a href="#home"><i class="fas fa-home" style="margin-right: 8px"></i>Home</a></li>
+<li><a href="#about"><i class="fas fa-heart" style="margin-right: 8px"></i>About</a></li>
+<li><a href="#gallery"><i class="fas fa-images" style="margin-right: 8px"></i>Gallery</a></li>
+<li><a href="#contact"><i class="fas fa-envelope" style="margin-right: 8px"></i>Contact</a></li>
+</ul>
+</div>
+</footer>
+
+<script>
+// Mobile Menu Toggle
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
+hamburger.addEventListener("click", () => {
+hamburger.classList.toggle("active");
+navMenu.classList.toggle("active");
+});
+document.querySelectorAll(".nav-menu a").forEach((link) => {
+link.addEventListener("click", () => {
+hamburger.classList.remove("active");
+navMenu.classList.remove("active");
+});
+});
+
+// Hero Animation on Load
+window.addEventListener("load", () => {
+document.querySelector(".hero-content").classList.add("visible");
+});
+
+// Scroll Reveal Animation
+const revealElements = document.querySelectorAll(".reveal");
+const observer = new IntersectionObserver(
+(entries) => {
+entries.forEach((entry) => {
+if (entry.isIntersecting) {
+entry.target.classList.add("active");
+observer.unobserve(entry.target);
+}
+});
+},
+{ threshold: 0.1 }
+);
+revealElements.forEach((el) => observer.observe(el));
+
+// Header Scroll Effect
+window.addEventListener("scroll", () => {
+const header = document.querySelector("header");
+if (window.scrollY > 100) {
+header.style.backgroundColor = "rgba(15, 10, 15, 0.99)";
+header.style.boxShadow = "0 4px 30px rgba(255, 107, 157, 0.15)";
+} else {
+header.style.backgroundColor = "rgba(15, 10, 15, 0.95)";
+}
+});
+
+// WhatsApp Form Submission
+document.getElementById("whatsappForm").addEventListener("submit", function (e) {
+e.preventDefault();
+
+// Get form values
+const name = document.getElementById("name").value.trim();
+const eventType = document.getElementById("event").value.trim();
+const startDate = document.getElementById("start-date").value;
+const endDate = document.getElementById("end-date").value;
+const message = document.getElementById("message").value.trim();
+
+// Date validation
+if (startDate && endDate && new Date(startDate) > new Date(endDate)) {
+alert("Start date cannot be after end date.");
+return;
+}
+
+// Format dates for display
+const formatDate = (dateString) => {
+if (!dateString) return "Not specified";
+const date = new Date(dateString);
+return date.toLocaleDateString('en-IN', {
+day: 'numeric',
+month: 'long',
+year: 'numeric'
+});
+};
+
+// Build WhatsApp message
+let whatsappMessage = `*New Inquiry - Symphony*\n\n`;
+whatsappMessage += `*Name:* ${name || 'Not provided'}\n`;
+whatsappMessage += `*Event Type:* ${eventType || 'Not specified'}\n`;
+whatsappMessage += `*Start Date:* ${formatDate(startDate)}\n`;
+whatsappMessage += `*End Date:* ${formatDate(endDate)}\n`;
+if (message) {
+whatsappMessage += `\n*Message:* ${message}\n`;
+}
+
+// Encode the message
+const encodedMessage = encodeURIComponent(whatsappMessage);
+
+
+const whatsappURL = `https://wa.me/916380704224?text=${encodedMessage}`;
+
+// Open WhatsApp
+window.open(whatsappURL, "_blank");
+
+// Show confirmation message
+alert(`Thank you ${name || ''}! 💕\nYour inquiry has been sent to WhatsApp. Please click "Send" in the chat to submit it.`);
+
+// Reset form
+this.reset();
+
+// Reset min dates
+const today = new Date().toISOString().split("T")[0];
+document.getElementById("start-date").min = today;
+document.getElementById("end-date").min = today;
+});
+
+// Set min date to today and set some default values for testing
+document.addEventListener("DOMContentLoaded", () => {
+const today = new Date().toISOString().split("T")[0];
+document.getElementById("start-date").min = today;
+document.getElementById("end-date").min = today;
+
+// Set tomorrow as default start date
+const tomorrow = new Date();
+tomorrow.setDate(tomorrow.getDate() + 1);
+const tomorrowStr = tomorrow.toISOString().split("T")[0];
+document.getElementById("start-date").value = tomorrowStr;
+
+// Set day after tomorrow as default end date
+const dayAfterTomorrow = new Date();
+dayAfterTomorrow.setDate(dayAfterTomorrow.getDate() + 2);
+const dayAfterTomorrowStr = dayAfterTomorrow.toISOString().split("T")[0];
+document.getElementById("end-date").value = dayAfterTomorrowStr;
+});
+</script>
+</body>
+</html>
